@@ -1,0 +1,5 @@
+
+.gitignore
+.idea/
+sender/compile-output/production/sender/*
+sender/compile-output/production/ui/*
