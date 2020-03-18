@@ -1,4 +1,4 @@
-package ui.sample;
+package sender.ui.sample;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("sample.fxml"));
         Parent root = loader.load();
         Controller controller = loader.getController();
         controller.setHostServices(getHostServices());

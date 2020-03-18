@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sender.ui.sample.Controller">
    <children>
       <VBox prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -39,7 +40,14 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label id="serverStatusDisplay" fx:id="serverStatusDisplay" alignment="CENTER" contentDisplay="CENTER" text="IDLE" />
+                  <ComboBox fx:id="mixers" prefWidth="150.0" />
+                  <ComboBox fx:id="dataLines" prefWidth="150.0" />
+                  <ComboBox fx:id="formats" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label id="serverStatusDisplay" fx:id="serverStatusDisplay" alignment="CENTER" contentDisplay="CENTER" text="IDLE" textAlignment="CENTER" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -56,7 +64,7 @@
       </VBox>
       <ImageView fitHeight="101.0" fitWidth="919.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../resources/images/audio_connect_512.png" />
+            <Image url="@sender/ui/resources/images/audio_connect_512.png" />
          </image>
       </ImageView>
    </children>
